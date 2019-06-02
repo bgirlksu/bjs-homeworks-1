@@ -52,18 +52,12 @@ function calculateAverageRating() {
 function getAverageMark(marks) {
 	// код для задачи №2 писать здесь
 	//return averageMark;
+	marks.length = 5;
 	let averageMark = 0;
-	if (marks.length > 5) {
-		console.log('Оценок больше пяти!');
-		while (marks.length > 5) {
-            marks.pop();
-            console.log(marks);
-		}
-    }
-    for (let i =0; i < marks.length; i++) {
-        averageMark += marks[i];
-    }
-    averageMark /= marks.length;
-    console.log(`Средняя оценка : ${averageMark}`);
-    return averageMark;
+	for (let i = 0; i < marks.length; i++) {
+		averageMark += marks[i];
+	}
+	averageMark /= marks.length;
+	console.log(`Средняя оценка : ${averageMark}`);
+	return averageMark;
 }
